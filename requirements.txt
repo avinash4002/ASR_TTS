@@ -6,3 +6,4 @@ requests
 google-generativeai
 langdetect
 langid
+pyaudio
