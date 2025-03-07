@@ -1,0 +1,8 @@
+speechrecognition
+deep-translator
+gtts
+pygame
+requests
+google-generativeai
+langdetect
+langid
