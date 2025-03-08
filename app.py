@@ -2,8 +2,6 @@ import speech_recognition as sr
 from deep_translator import GoogleTranslator
 from gtts import gTTS
 import os
-from dotenv import load_dotenv
-load_dotenv()
 import pygame
 import requests
 import json
@@ -17,6 +15,8 @@ DetectorFactory.seed = 0
 
 # Initialize pygame for audio playback
 pygame.mixer.init()
+
+load_dotenv()
 
 # Common English words that strongly indicate English
 ENGLISH_INDICATORS = [
@@ -104,6 +104,8 @@ def translate_text(text, source_lang, target_lang):
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("API key not found. Please set the GEMINI_API_KEY environment variable.")
+
+print("API key found. Initializing Gemini API...")
 
 genai.configure(api_key=api_key)
 
