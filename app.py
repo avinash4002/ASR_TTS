@@ -9,6 +9,7 @@ import re
 import google.generativeai as genai
 from langdetect import detect, DetectorFactory
 import langid
+from dotenv import load_dotenv
 
 # Set seed for consistent language detection
 DetectorFactory.seed = 0
