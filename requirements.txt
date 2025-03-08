@@ -8,3 +8,4 @@ langdetect
 langid
 pyaudio
 python-dotenv
+googletrans

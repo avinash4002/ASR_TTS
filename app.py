@@ -119,8 +119,11 @@ def generate_response_with_gemini(text, max_tokens=100):
     print("Generating response using Gemini-2 Flash...")
 
     prompt = (
-        "Respond concisely and clearly. Do not use special characters, symbols, or emojis. "
-        "Keep it short and suitable for speech synthesis. Here is the input: " + text
+        "Provide a well-structured and informative response. "
+        "Ensure clarity while adding relevant details, explanations, or examples. "
+        "Keep the response natural and suitable for spoken conversation. "
+        "Do not use special characters, symbols, or emojis. "
+        "Here is the input: " + text
     )
 
     try:
@@ -188,6 +191,7 @@ def main():
     
     # 4. Generate response with Gemini API
     response_text = generate_response_with_gemini(english_text)
+    print(response_text)
     
     # 5. Translate response back to original language if needed
     if detected_language == "hi":
