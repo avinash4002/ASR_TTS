@@ -2,6 +2,8 @@ import speech_recognition as sr
 from deep_translator import GoogleTranslator
 from gtts import gTTS
 import os
+import dotenv
+dotenv.load_dotenv()
 import pygame
 import requests
 import json
@@ -10,7 +12,7 @@ import google.generativeai as genai
 from langdetect import detect, DetectorFactory
 import langid
 
-# Set seed for consistent language detection
+# Set seed for consisptent language detection
 DetectorFactory.seed = 0
 
 # Initialize pygame for audio playback
